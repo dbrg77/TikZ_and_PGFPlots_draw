@@ -38,6 +38,34 @@
 \definecolor{light11}{RGB}{220,88,125}
 \definecolor{light12}{RGB}{214,39,255}
 
+% Polychrome - Chromosome
+\definecolor{chr1}{RGB}{254,251,87}
+\definecolor{chr2}{RGB}{193,86,98}
+\definecolor{chr3}{RGB}{179,191,245}
+\definecolor{chr4}{RGB}{117,249,240}
+\definecolor{chr5}{RGB}{234,138,51}
+\definecolor{chr6}{RGB}{158,93,202}
+\definecolor{chr7}{RGB}{148,110,107}
+\definecolor{chr8}{RGB}{243,201,133}
+\definecolor{chr9}{RGB}{240,254,238}
+\definecolor{chr10}{RGB}{175,227,71}
+\definecolor{chr11}{RGB}{93,197,229}
+\definecolor{chr12}{RGB}{231,63,240}
+\definecolor{chr13}{RGB}{226,48,34}
+\definecolor{chr14}{RGB}{237,127,197}
+\definecolor{chr15}{RGB}{79,130,131}
+\definecolor{chr16}{RGB}{175,53,245}
+\definecolor{chr17}{RGB}{73,169,246}
+\definecolor{chr18}{RGB}{234,53,132}
+\definecolor{chr19}{RGB}{148,248,184}
+\definecolor{chr20}{RGB}{77,109,246}
+\definecolor{chr21}{RGB}{234,253,173}
+\definecolor{chr22}{RGB}{246,198,236}
+\definecolor{chrX}{RGB}{93,136,65}
+\definecolor{chrY}{RGB}{116,249,115}
+
+%% Document starts
+
 \begin{document}
 
 \begin{tikzpicture}
@@ -237,6 +265,36 @@
 %    \node at (2.11,0.925) {\psbarcode[linecolor=black]{13572}{width=0.03 height=0.02}{ean5}};
 %    \shade[ultra thin, draw=bead12, ball color=light12] (2.475, 0.95) circle (0.06);
 %    \node at (2.435,0.925) {\psbarcode[linecolor=black]{23487}{width=0.03 height=0.02}{ean5}};
+
+    % cells
+    \draw[ultra thin, fill=chr1] (0.1,0.9) circle (0.015);
+    \draw[ultra thin, fill=chr2] (0.177,1) circle (0.015);
+    \draw[ultra thin, fill=chr3] (0.254,0.95) circle (0.015);
+    \draw[ultra thin, fill=chr4] (0.331,0.975) circle (0.015);
+    \draw[ultra thin, fill=chr5] (0.408,0.925) circle (0.015);
+    \draw[ultra thin, fill=chr6] (0.485,0.89) circle (0.015);
+    \draw[ultra thin, fill=chr7] (0.562,0.94) circle (0.015);
+    \draw[ultra thin, fill=chr8] (0.639,0.93) circle (0.015);
+    \draw[ultra thin, fill=chr9] (0.716,1.015) circle (0.015);
+    \draw[ultra thin, fill=chr10] (0.75,0.875) circle (0.015);
+    \draw[ultra thin, fill=chr11] (0.87,0.96) circle (0.015);
+    \draw[ultra thin, fill=chr12] (0.947,0.94) circle (0.015);
+    \draw[ultra thin, fill=chr13] (1.015,1.02) circle (0.015);
+    \draw[ultra thin, fill=chr14] (1.1,0.875) circle (0.015);
+    
+    \draw[ultra thin, fill=chr15] (1.3,0.95) circle (0.015);
+    \draw[ultra thin, fill=chr16] (1.4,1) circle (0.015);
+    \draw[ultra thin, fill=chr17] (1.45,0.885) circle (0.015);
+    \draw[ultra thin, fill=chr18] (1.58,0.96) circle (0.015);
+    
+    \draw[ultra thin, fill=chr19] (1.685,0.975) circle (0.015);
+    \draw[ultra thin, fill=chr20] (1.725,0.9) circle (0.015);
+    \draw[ultra thin, fill=chr21] (1.9,0.935) circle (0.015);
+    
+    \draw[ultra thin, fill=chr22] (2.07,1.01) circle (0.015);
+    \draw[ultra thin, fill=chrX] (2.25,0.91) circle (0.015);
+    
+    \draw[ultra thin, fill=chrY] (2.385,0.975) circle (0.015);
 \end{tikzpicture}
     
 \end{document}
