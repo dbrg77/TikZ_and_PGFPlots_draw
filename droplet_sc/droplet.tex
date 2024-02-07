@@ -4,12 +4,13 @@
 %\usepackage{xcolor}
 \usepackage{pst-barcode}
 \usepackage{tikz}
-\usetikzlibrary{positioning, arrows.meta, shapes, snakes}
+\usetikzlibrary{positioning, arrows.meta, shapes, snakes, shadings}
 %\usepackage{amsmath,amssymb,amsthm,pgfplots}
 
 \definecolor{nuclei}{RGB}{169,201,237}
 \definecolor{oil}{RGB}{132,132,130}
 
+% Polychrome - Kelly
 \definecolor{bead1}{RGB}{242,243,244}
 \definecolor{bead2}{RGB}{175,35,55}
 \definecolor{bead3}{RGB}{236,195,66}
@@ -22,6 +23,20 @@
 \definecolor{bead10}{RGB}{126,51,31}
 \definecolor{bead11}{RGB}{59,133,90}
 \definecolor{bead12}{RGB}{192,178,134}
+
+% Polychrome - Light24
+\definecolor{light1}{RGB}{253,50,22}
+\definecolor{light2}{RGB}{6,254,53}
+\definecolor{light3}{RGB}{106,118,252}
+\definecolor{light4}{RGB}{254,212,196}
+\definecolor{light5}{RGB}{251,0,203}
+\definecolor{light6}{RGB}{24,205,211}
+\definecolor{light7}{RGB}{246,249,38}
+\definecolor{light8}{RGB}{255,150,22}
+\definecolor{light9}{RGB}{71,155,85}
+\definecolor{light10}{RGB}{238,166,251}
+\definecolor{light11}{RGB}{220,88,125}
+\definecolor{light12}{RGB}{214,39,255}
 
 \begin{document}
 
@@ -76,15 +91,6 @@
                  to[out=45, in=0]    (0.5,0.85)
                  --                  (0,0.85)
                  --                  cycle;
-                 
-%    %% the output oil
-%    \filldraw[draw=none, fill=oil]
-%        (1.15,1.04) to[out=270, in=180] (1.25,1.05)
-%                    --                  (2.6,1.05)
-%                    --                  (2.6,0.85)
-%                    --                  (1.25,0.85)
-%                    to[out=180, in=90]  (1.15,0.86)
-%                    --                  cycle;
     
     %% drop
     %%% curved drop
@@ -205,6 +211,32 @@
     \node at (2.11,0.925) {\psbarcode[linecolor=bead11]{13572}{width=0.03 height=0.02}{ean5}};
     \filldraw[ultra thin, draw=bead12, fill=bead12!50] (2.475, 0.95) circle (0.06);
     \node at (2.435,0.925) {\psbarcode[linecolor=bead12]{23487}{width=0.03 height=0.02}{ean5}};
+    
+%    % barcode beads (3D like)
+%    \shade[ultra thin, draw=bead1, ball color=light1!50] (0.13, 0.3) circle (0.06);
+%    \node at (0.09,0.275) {\psbarcode[linecolor=black]{01234}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead2, ball color=light2!50] (0.24, 0.4) circle (0.06);
+%    \node at (0.2,0.375) {\psbarcode[linecolor=black]{14235}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead3, ball color=light3!50] (0.35, 0.5) circle (0.06);
+%    \node at (0.31,0.475) {\psbarcode[linecolor=black]{31254}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead4, ball color=light4!50] (0.46, 0.6) circle (0.06);
+%    \node at (0.42,0.575) {\psbarcode[linecolor=black]{54231}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead5, ball color=light5] (0.57, 0.7) circle (0.06);
+%    \node at (0.53,0.675) {\psbarcode[linecolor=black]{42315}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead6, ball color=light6] (0.67, 0.805) circle (0.06);
+%    \node at (0.63,0.78) {\psbarcode[linecolor=black]{76342}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead7, ball color=light7] (0.78, 0.95) circle (0.06);
+%    \node at (0.74,0.925) {\psbarcode[linecolor=black]{67531}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead8, ball color=light8] (1.05, 0.95) circle (0.06);
+%    \node at (1.01,0.925) {\psbarcode[linecolor=black]{23546}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead9, ball color=light9] (1.5, 0.95) circle (0.06);
+%    \node at (1.46,0.925) {\psbarcode[linecolor=black]{32485}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead10, ball color=light10] (1.8, 0.95) circle (0.06);
+%    \node at (1.76,0.925) {\psbarcode[linecolor=black]{76543}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead11, ball color=light11] (2.15, 0.95) circle (0.06);
+%    \node at (2.11,0.925) {\psbarcode[linecolor=black]{13572}{width=0.03 height=0.02}{ean5}};
+%    \shade[ultra thin, draw=bead12, ball color=light12] (2.475, 0.95) circle (0.06);
+%    \node at (2.435,0.925) {\psbarcode[linecolor=black]{23487}{width=0.03 height=0.02}{ean5}};
 \end{tikzpicture}
     
 \end{document}
