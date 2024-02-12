@@ -1,0 +1,25 @@
+\documentclass[tikz]{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning, arrows.meta, shapes, snakes, shadings}
+\usepackage{amsmath,amssymb,amsthm,pgfplots}
+
+\pgfmathdeclarefunction{gauss}{2}{%
+  \pgfmathparse{1/(#2*sqrt(2*pi))*exp(-((x-#1)^2)/(2*#2^2))}
+}
+
+\begin{document}
+    \begin{tikzpicture}
+        \begin{axis}[width=7cm, height=5cm, axis on top, axis line style=very thick, tick style=very thick,
+             axis x line = middle, axis y line=middle, xtick=\empty, ytick=\empty, ymin=-0.03, ymax=0.26, xmin=-1.6,
+             xmax=12, xlabel=$x$, x label style={at={(axis description cs:1.1,-0.03)}},
+             ylabel=$f_{\boldsymbol{X}}(x)$, y label style={at={(axis description cs:-0.15,1)}},]
+            \addplot[draw=none, domain=3:7, samples=100, smooth, fill=red!50] {0.4*gauss(2.5,1) + 0.6*gauss(6.5,1)} \closedcycle;
+            \addplot[very thick, domain=-5:13, samples=100, smooth] {0.4*gauss(2.5,1) + 0.6*gauss(6.5,1)};
+            \addplot[very thick, dashed] coordinates {(3,0) (3, 0.141)};
+            \addplot[very thick, dashed] coordinates {(7,0) (7, 0.211)};
+            \addplot[draw=none] coordinates {(3,-0.015)} node {$a$};
+            \addplot[draw=none] coordinates {(7,-0.015)} node {$b$};
+        \end{axis}
+    \end{tikzpicture}   
+\end{document}
