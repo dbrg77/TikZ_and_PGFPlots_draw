@@ -31,17 +31,27 @@
 \definecolor{korangeyellow}{RGB}{235,168,59}
 \definecolor{kviolet}{RGB}{93,80,146}
 \definecolor{kblack}{RGB}{34,34,34}
+\definecolor{eedarkblue}{HTML}{202040}
+\definecolor{eepurple}{HTML}{543864}
+\definecolor{eered}{HTML}{ff6363}
+\definecolor{eeyellow}{HTML}{ffbd69}
+\definecolor{eecyan}{HTML}{64ccda}
 
 \begin{document}
     \begin{tikzpicture}
         % background
-        \draw[draw=none, fill=kbuff!25] (3,3) circle[radius=3.05];
+        \draw[draw=none, fill=eecyan!75] (3,3) circle[radius=3.05];
         
         % blastomeres
-        \foreach \x in {0,90,180,270}
+        \foreach \x in {0,180}
         {
-            \draw[thick, draw=kviolet, fill=kpurple!50, opacity=.5, rotate around={\x:(3,3)}] (3,4.5) circle[radius=1.5];
-            \draw[draw=kviolet, inner color=white, outer color=kpurple!75, rotate around={\x:(3,3)}] (3,4.5) circle[radius=0.4];
+            \draw[thick, eedarkblue, fill=eepurple!75, opacity=.75, rotate around={\x:(3,3)}] (3,4.5) circle[radius=1.5];
+            \draw[draw=eedarkblue, inner color=gray!50, outer color=eepurple!75, rotate around={\x:(3,3)}] (3,4.5) circle[radius=0.4];
+        }
+        \foreach \x in {90,270}
+        {
+            \draw[thick, eedarkblue, fill=eepurple!75, opacity=.75, rotate around={\x:(3,3)}] (3,4.5) circle[radius=1.5];
+            \draw[draw=eedarkblue, inner color=gray!50, outer color=eepurple!75, rotate around={\x:(3,3)}] (3,4.5) circle[radius=0.4];
         }
         
         % zona pellucida

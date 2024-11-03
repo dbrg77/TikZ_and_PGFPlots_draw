@@ -31,23 +31,28 @@
 \definecolor{korangeyellow}{RGB}{235,168,59}
 \definecolor{kviolet}{RGB}{93,80,146}
 \definecolor{kblack}{RGB}{34,34,34}
+\definecolor{eedarkblue}{HTML}{202040}
+\definecolor{eepurple}{HTML}{543864}
+\definecolor{eered}{HTML}{ff6363}
+\definecolor{eeyellow}{HTML}{ffbd69}
+\definecolor{eecyan}{HTML}{64ccda}
 
 \begin{document}
     \begin{tikzpicture}
         % background
-        \draw[draw=none, fill=kbuff!25] (3,3) circle[radius=3.05];
+        \draw[draw=none, fill=eecyan!75] (3,3) circle[radius=3.05];
         
         % polar body
         \draw[thick, kgrey, fill=kgrey!50] (3,4.4) circle[x radius=0.35, y radius = 0.25];
         \draw[kgrey, dashed, fill=kgrey!75] (3,4.4) circle[radius = 0.125];
         
         % left blastomere
-        \draw[thick, draw=kviolet, fill=kpurple!25] (1.5,3) circle[x radius=1.5, y radius=2];
-        \draw[draw=kviolet, inner color=white, outer color=kpurple!75] (1.5,3) circle[radius=0.4];
+        \draw[thick, draw=eedarkblue, outer color=eepurple!75, inner color=gray!15] (1.5,3) circle[x radius=1.5, y radius=2];
+        \draw[draw=eepurple, inner color=gray!50, outer color=eepurple!75] (1.5,3) circle[radius=0.4];
         
         % right lastomere
-        \draw[thick, draw=kviolet, fill=kpurple!25] (4.5,3) circle[x radius=1.5, y radius=2];
-        \draw[draw=kviolet, inner color=white, outer color=kpurple!75] (4.5,3) circle[radius=0.4];
+        \draw[thick, draw=eedarkblue, outer color=eepurple!75, inner color=gray!15] (4.5,3) circle[x radius=1.5, y radius=2];
+        \draw[draw=eepurple, inner color=gray!50, outer color=eepurple!75] (4.5,3) circle[radius=0.4];
         
         % zona pellucida
         \draw[draw=none, fill=kgrey!35, even odd rule]
